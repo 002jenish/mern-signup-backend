@@ -8,7 +8,7 @@ const app = express();
 const port = process.env.PORT || 8080;
 //<--------------------------------------------------------------------------------------------------->
 // Connect to MongoDB
-mongoose.connect(
+mongoose.connect( 
   "mongodb+srv://jenish1234:jenish_1234@todo.8jbdgxm.mongodb.net/demo2",
   {
     useNewUrlParser: true,
@@ -72,6 +72,11 @@ app.get("/register", async (req, res) => {
     res.status(500).json({ error: "Internal Server Error" });
   }
 });
+
+//<--------------------------------------------------------------------------------------------------->
+app.get('/',(req,res)=>{
+  res.sene("Hey its working");
+})
 
 //<--------------------------------------------------------------------------------------------------->
 // Start the server
