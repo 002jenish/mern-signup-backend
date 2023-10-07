@@ -27,13 +27,13 @@ const User = mongoose.model("User", userSchema);
 //<--------------------------------------------------------------------------------------------------->
 // Middleware
 app.use(bodyParser.json());
-app.use(cors());
-// const corsOptions = {
-//     origin: 'https://your-vercel-app.vercel.app', // Replace with your Vercel app's URL
-//     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
-//     credentials: true, // Enable cookies and authentication headers
-//   };
-// app.use(cors(corsOptions));
+// app.use(cors());
+const corsOptions = {
+    origin: ['https://mern-signup-backend.vercel.app/','htthttp://localhost:3000/register'], // Replace with your Vercel app's URL
+    methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+    credentials: true, // Enable cookies and authentication headers
+  };
+app.use(cors(corsOptions));
 
 //<--------------------------------------------------------------------------------------------------->
 // Registration API endpoint
