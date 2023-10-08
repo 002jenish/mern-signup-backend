@@ -29,7 +29,7 @@ const User = mongoose.model("User", userSchema);
 app.use(bodyParser.json());
 // app.use(cors());
 const corsOptions = {
-    origin: ['https://mern-signup-backend.vercel.app/','http://localhost:3000/register'], // Replace with your Vercel app's URL
+    origin: ['https://mern-signup-frontend.vercel.app/','http://localhost:3000/register'], 
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
     credentials: true, // Enable cookies and authentication headers
   };
